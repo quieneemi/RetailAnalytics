@@ -1,0 +1,9 @@
+<ng-container *ngIf="authService.isAuthenticated">
+  <button mat-button style="font-size: large" [matMenuTriggerFor]="menu">
+    <i class="bi bi-person-circle"></i>
+    {{ authService.username }}
+  </button>
+  <mat-menu #menu>
+    <button mat-menu-item (click)="authService.logout()">Log out</button>
+  </mat-menu>
+</ng-container>

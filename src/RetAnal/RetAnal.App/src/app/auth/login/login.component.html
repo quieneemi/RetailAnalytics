@@ -1,0 +1,18 @@
+<div class="form-container">
+  <div class="mat-elevation-z8 p-3">
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+          <i [class]="hide ? 'bi-eye-slash' : 'bi-eye'"></i>
+        </button>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Login</button>
+    </form>
+  </div>
+</div>

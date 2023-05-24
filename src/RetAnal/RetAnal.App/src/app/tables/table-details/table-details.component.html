@@ -1,0 +1,42 @@
+<div *ngIf="table; else placeholder" class="mat-elevation-z5 table-responsive">
+  <div class="d-md-flex align-items-center p-2">
+    <ng-container *ngIf="showActions">
+      <button mat-stroked-button class="ms-2" (click)="openInsertDialog()">Insert</button>
+      <input type="file" #fileInput (change)="import($event)" style="display: none">
+      <button mat-stroked-button class="ms-2" (click)="fileInput.click()">Import</button>
+      <button mat-stroked-button class="ms-2 me-auto" (click)="export()">Export</button>
+    </ng-container>
+    <mat-paginator
+      (page)="handlePageEvent($event)"
+      [length]="table.rowsAmount"
+      [pageIndex]="pageIndex"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[5, 10, 25, 50]"
+      showFirstLastButtons="true">
+    </mat-paginator>
+  </div>
+  <table class="table table-sm table-striped table-bordered align-middle">
+    <thead class="table-secondary">
+    <tr>
+      <th *ngIf="showActions" scope="col" style="width: 1px; white-space: nowrap;"></th>
+      <th *ngFor="let col of table.columns" scope="col" style="padding: .5rem;">{{ col }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of table.rows">
+      <td *ngIf="showActions">
+        <div class="d-flex">
+          <a class="btn" (click)="openUpdateDialog(row)"><i class="bi-pencil"></i></a>
+          <a class="btn" (click)="openDeleteDialog(row)"><i class="bi-x-lg"></i></a>
+        </div>
+      </td>
+      <td *ngFor="let cell of row" style="padding: .5rem">{{ cell }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #placeholder>
+  <div class="d-flex justify-content-center mt-5">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

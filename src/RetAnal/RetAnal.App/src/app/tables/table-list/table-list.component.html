@@ -1,0 +1,8 @@
+<h2>Tables</h2>
+<div class="mat-elevation-z2">
+  <mat-selection-list>
+    <mat-list-item *ngFor="let table of tables" [routerLink]="['/tables', table]">
+      {{ table }}
+    </mat-list-item>
+  </mat-selection-list>
+</div>

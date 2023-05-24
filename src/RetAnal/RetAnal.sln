@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetAnal.Api", "RetAnal.Api\RetAnal.Api.csproj", "{7AB5582C-A483-4DDB-AD8F-8BFE5016D140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetAnal.Core", "RetAnal.Core\RetAnal.Core.csproj", "{52F6197D-D4F3-4EF4-9F16-FCB35092B34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetAnal.Data", "RetAnal.Data\RetAnal.Data.csproj", "{CF3E2B68-E5A8-4140-88BE-6E29F9DC92E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AB5582C-A483-4DDB-AD8F-8BFE5016D140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB5582C-A483-4DDB-AD8F-8BFE5016D140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB5582C-A483-4DDB-AD8F-8BFE5016D140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB5582C-A483-4DDB-AD8F-8BFE5016D140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F6197D-D4F3-4EF4-9F16-FCB35092B34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F6197D-D4F3-4EF4-9F16-FCB35092B34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F6197D-D4F3-4EF4-9F16-FCB35092B34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F6197D-D4F3-4EF4-9F16-FCB35092B34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3E2B68-E5A8-4140-88BE-6E29F9DC92E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3E2B68-E5A8-4140-88BE-6E29F9DC92E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3E2B68-E5A8-4140-88BE-6E29F9DC92E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3E2B68-E5A8-4140-88BE-6E29F9DC92E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+<div class="mb-5">
+  <app-table-list></app-table-list>
+</div>
+<div class="mb-5" *ngIf="authService.isAdministrator">
+  <app-offer-list></app-offer-list>
+</div>
+<div>
+  <app-about-page></app-about-page>
+</div>

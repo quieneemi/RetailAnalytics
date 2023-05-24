@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Result</h2>
+<mat-dialog-content class="mat-typography pt-2">
+  <table class="table table-sm table-striped align-middle">
+    <thead class="table-secondary">
+    <tr>
+      <th *ngFor="let col of data.table.columns" scope="col" style="padding: .5rem;">{{ col }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of data.table.rows">
+      <td *ngFor="let cell of row" style="padding: .5rem">{{ cell }}</td>
+    </tr>
+    </tbody>
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button color="accent" (click)="export()">Export</button>
+  <button mat-button color="primary" [mat-dialog-close]="null">Close</button>
+</mat-dialog-actions>
